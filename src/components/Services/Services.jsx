@@ -31,7 +31,9 @@ export default function Services() {
                 <div className={`services__grid${visible ? ' visible' : ''}`}>
                     {s.items.map((item, i) => (
                         <div key={i} className="service-card" style={{ '--i': i }}>
-                            <div className="service-card__icon">{item.icon}</div>
+                            <div className="service-card__icon">
+                                <span>{item.icon}</span>
+                            </div>
                             <h3>{item.title}</h3>
                             <p>{item.desc}</p>
                             <div className="service-card__line" />

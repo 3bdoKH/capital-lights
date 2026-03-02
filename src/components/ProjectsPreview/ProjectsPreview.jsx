@@ -54,7 +54,10 @@ export default function ProjectsPreview() {
                             <div className="project-card__info">
                                 <h3>{isAr ? proj.titleAr : proj.titleEn}</h3>
                                 <div className="project-card__meta">
-                                    <span>📍 {isAr ? proj.locAr : proj.locEn}</span>
+                                    <span className="project-card__loc">
+                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
+                                        {isAr ? proj.locAr : proj.locEn}
+                                    </span>
                                     <span className="project-card__val">{isAr ? proj.valAr : proj.valEn}</span>
                                 </div>
                             </div>

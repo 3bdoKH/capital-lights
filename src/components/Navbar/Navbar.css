@@ -120,7 +120,6 @@ body[dir="rtl"] .navbar__logo-text {
     width: 36px;
     height: 36px;
     border-radius: var(--radius-sm);
-    font-size: 16px;
     color: var(--text-secondary);
     transition: var(--transition);
     background: transparent;
@@ -201,7 +200,7 @@ body[dir="rtl"] .navbar__logo-text {
     background: rgba(13, 15, 20, 0.98);
     backdrop-filter: blur(16px);
     border-top: 1px solid var(--border);
-    padding: 16px 0 24px;
+    padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease, padding 0.3s;

@@ -108,6 +108,13 @@ body[dir="rtl"] .project-card__cat {
     color: var(--text-muted);
 }
 
+.project-card__loc {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-muted);
+}
+
 .project-card__val {
     color: var(--accent);
     font-weight: 700;

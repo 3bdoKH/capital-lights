@@ -53,9 +53,26 @@
     color: var(--text-muted);
 }
 
-.footer__badge {
-    color: var(--accent);
-    font-size: 12px;
+.footer__badge-check {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    position: relative;
+}
+
+.footer__badge-check::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 6px;
+    height: 3.5px;
+    border-left: 1.5px solid #fff;
+    border-bottom: 1.5px solid #fff;
+    transform: rotate(-45deg);
 }
 
 /* Columns */
