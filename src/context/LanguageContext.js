@@ -72,20 +72,73 @@ export const translations = {
       galleryTag: 'Gallery',
       galleryTitle: 'Our Projects in Pictures',
     },
-    /* ── Services ── */
+    /* ── Services (home preview) ── */
     services: {
       tag: 'What We Do',
       title: 'Our Core Services',
-      desc: 'From high-voltage installations to full civil works, our integrated capabilities cover the full spectrum of electromechanical contracting.',
+      desc: 'From high-voltage installations to full civil works, our integrated capabilities cover the full spectrum of electromechanical and general contracting.',
       items: [
         { icon: 'EL', title: 'Electrical Works', desc: 'High & medium voltage installations, substation construction, and power distribution systems.' },
-        { icon: 'ME', title: 'Mechanical Works', desc: 'HVAC, plumbing, fire-fighting systems and mechanical utility installations.' },
-        { icon: 'CV', title: 'Civil Works', desc: 'Structural construction, civil foundations, and infrastructure development.' },
+        { icon: 'ME', title: 'Mechanical Works', desc: 'HVAC, fire-fighting systems and full mechanical utility installations.' },
+        { icon: 'CV', title: 'General Construction', desc: 'Structural construction, civil foundations, and infrastructure development.' },
         { icon: 'PS', title: 'Power Systems', desc: 'Switchgear, transformers, generators, and UPS systems supply and installation.' },
         { icon: 'LT', title: 'Lighting Solutions', desc: 'Street lighting, industrial lighting and smart lighting control systems.' },
         { icon: 'OM', title: 'Maintenance & O&M', desc: 'Preventive and corrective maintenance contracts for electrical networks.' },
       ],
       cta: 'All Services',
+    },
+    /* ── Services Page (full detail) ── */
+    servicesPage: {
+      heroTitle: 'Our Services',
+      heroSubtitle: 'Comprehensive electromechanical, civil and maintenance contracting — Grade I classified since 1967.',
+      introTag: 'What We Offer',
+      introTitle: 'Integrated Contracting Capabilities',
+      introDesc: 'From initial scoping to final handover, Capital Lights delivers end-to-end electromechanical and civil contracting services across the Kingdom of Saudi Arabia.',
+      services: [
+        {
+          code: 'EL', title: 'Electrical Works',
+          desc: 'Full-spectrum electrical contracting from high-voltage transmission to low-voltage distribution, powering infrastructure across the Kingdom.',
+          bullets: ['High & medium voltage (HV/MV) installations', 'Substation construction & commissioning', 'Power distribution panels & cabling', 'Earthing & lightning protection systems', 'Emergency power & backup systems'],
+        },
+        {
+          code: 'ME', title: 'Mechanical Works',
+          desc: 'Complete mechanical system design and installation for commercial, industrial and government facilities.',
+          bullets: ['HVAC systems — supply, install & commission', 'Plumbing & sanitary systems', 'Fire-fighting & suppression systems', 'Compressed air & piping networks', 'Mechanical utility infrastructure'],
+        },
+        {
+          code: 'CV', title: 'General Construction',
+          desc: 'Turnkey civil and construction works aligned with the Kingdom\'s infrastructure expansion programmes.',
+          bullets: ['Structural & reinforced concrete works', 'Foundations & earthworks', 'Road & external infrastructure works', 'Masonry, block work & plastering', 'Pre-construction planning & scheduling'],
+        },
+        {
+          code: 'PS', title: 'Power Systems',
+          desc: 'Supply, installation and commissioning of complete power system equipment for industrial and utility clients.',
+          bullets: ['MV/LV switchgear panels', 'Power & distribution transformers', 'Diesel generators — supply & install', 'UPS & battery backup systems', 'Power factor correction equipment'],
+        },
+        {
+          code: 'LT', title: 'Lighting Solutions',
+          desc: 'Smart and conventional lighting systems for roads, facilities and industrial sites across the Kingdom.',
+          bullets: ['Street & road lighting networks', 'Industrial & warehouse lighting', 'Architectural & facade lighting', 'Smart lighting control systems', 'Lighting panel boards & wiring'],
+        },
+        {
+          code: 'PL', title: 'Plumbing & Sanitary',
+          desc: 'Professional plumbing, drainage and sanitary system installation for all building types.',
+          bullets: ['Water supply & distribution piping', 'Drainage & sewage systems', 'Sanitary fixtures installation', 'Hot & cold water systems', 'Pump rooms & boosters'],
+        },
+        {
+          code: 'PT', title: 'Painting & Finishing',
+          desc: 'High-quality interior and exterior painting, protective coatings and surface treatment works.',
+          bullets: ['Interior & exterior painting', 'Protective & anti-corrosion coatings', 'Epoxy floor coatings', 'Surface preparation & priming', 'Industrial structure painting'],
+        },
+        {
+          code: 'OM', title: 'Maintenance & O&M',
+          desc: 'Long-term operation and maintenance contracts keeping electrical assets running safely and efficiently.',
+          bullets: ['Preventive maintenance schedules', 'Corrective & emergency maintenance', 'Electrical network O&M contracts', 'Testing & inspection services', 'Spare parts supply & management'],
+        },
+      ],
+      ctaTitle: 'Need a Tailored Service?',
+      ctaDesc: 'Our team is ready to discuss your project requirements and provide a competitive proposal.',
+      ctaBtn: 'Contact Us',
     },
     /* ── Projects ── */
     projects: {
@@ -204,6 +257,60 @@ export const translations = {
       ],
       cta: 'كل الخدمات',
     },
+    /* ── Services Page AR ── */
+    servicesPage: {
+      heroTitle: 'خدماتنا',
+      heroSubtitle: 'مقاولات كهروميكانيكية ومدنية وصيانة متكاملة — مصنّفون درجة أولى منذ 1967م.',
+      introTag: 'ما نقدمه',
+      introTitle: 'قدرات مقاولات متكاملة',
+      introDesc: 'من مرحلة الدراسة الأولية حتى التسليم النهائي، تقدم أضواء العاصمة خدمات مقاولات كهروميكانيكية ومدنية متكاملة في أرجاء المملكة العربية السعودية.',
+      services: [
+        {
+          code: 'EL', title: 'الأعمال الكهربائية',
+          desc: 'مقاولات كهربائية متكاملة من الجهد العالي إلى الجهد المنخفض، تغذي البنية التحتية في أرجاء المملكة.',
+          bullets: ['تركيبات الجهد العالي والمتوسط', 'إنشاء المحطات وتكليفها', 'لوحات توزيع الطاقة والكابلات', 'أنظمة التأريض والحماية من الصواعق', 'أنظمة الطاقة الاحتياطية والطوارئ'],
+        },
+        {
+          code: 'ME', title: 'الأعمال الميكانيكية',
+          desc: 'تصميم وتنفيذ أنظمة ميكانيكية متكاملة للمنشآت التجارية والصناعية والحكومية.',
+          bullets: ['أنظمة التكييف — توريد وتركيب وتشغيل', 'أنظمة السباكة والصرف الصحي', 'أنظمة الإطفاء والإخماد', 'شبكات الهواء المضغوط والأنابيب', 'البنية التحتية الميكانيكية'],
+        },
+        {
+          code: 'CV', title: 'الإنشاءات العامة',
+          desc: 'أعمال مدنية وإنشائية متكاملة تتوافق مع برامج التوسع في البنية التحتية بالمملكة.',
+          bullets: ['الأعمال الإنشائية والخرسانة المسلحة', 'الأساسات وأعمال الحفر', 'أعمال الطرق والبنية التحتية الخارجية', 'أعمال البناء بالطوب والمونة والتشطيب', 'التخطيط وجدولة مرحلة ما قبل الإنشاء'],
+        },
+        {
+          code: 'PS', title: 'أنظمة الطاقة',
+          desc: 'توريد وتركيب وتشغيل معدات أنظمة الطاقة الكاملة للعملاء الصناعيين والخدميين.',
+          bullets: ['لوحات محولات التوزيع MV/LV', 'محولات الطاقة والتوزيع', 'المولدات الديزلية — توريد وتركيب', 'أنظمة UPS والبطاريات الاحتياطية', 'معدات تصحيح معامل القدرة'],
+        },
+        {
+          code: 'LT', title: 'حلول الإضاءة',
+          desc: 'أنظمة إضاءة ذكية واعتيادية للطرق والمنشآت والمواقع الصناعية.',
+          bullets: ['شبكات إنارة الشوارع والطرق', 'إضاءة صناعية ومستودعات', 'الإضاءة المعمارية وواجهات المباني', 'أنظمة التحكم الذكي في الإضاءة', 'لوحات ومحولات الإضاءة'],
+        },
+        {
+          code: 'PL', title: 'السباكة والصرف الصحي',
+          desc: 'تركيب محترف لأنظمة السباكة والصرف والصحي لجميع أنواع المباني.',
+          bullets: ['أنابيب إمداد وتوزيع المياه', 'أنظمة الصرف الصحي والمجاري', 'تركيب التجهيزات الصحية', 'أنظمة المياه الساخنة والباردة', 'غرف المضخات والمعززات'],
+        },
+        {
+          code: 'PT', title: 'الدهانات والتشطيبات',
+          desc: 'أعمال دهانات داخلية وخارجية عالية الجودة وطلاءات وقائية وأعمال معالجة الأسطح.',
+          bullets: ['الدهانات الداخلية والخارجية', 'الطلاءات الواقية ومضادة التآكل', 'طلاءات الإيبوكسي للأرضيات', 'تحضير الأسطح والطلاء التمهيدي', 'دهانات الهياكل الصناعية'],
+        },
+        {
+          code: 'OM', title: 'الصيانة وتشغيل الأصول',
+          desc: 'عقود تشغيل وصيانة طويلة الأمد تضمن عمل الأصول الكهربائية بأمان وكفاءة.',
+          bullets: ['جداول الصيانة الوقائية', 'الصيانة التصحيحية والطوارئ', 'عقود تشغيل وصيانة شبكات الكهرباء', 'خدمات الاختبار والفحص', 'توريد وإدارة قطع الغيار'],
+        },
+      ],
+      ctaTitle: 'تحتاج خدمة مخصصة؟',
+      ctaDesc: 'فريقنا جاهز لمناقشة متطلبات مشروعك وتقديم عرض تنافسي.',
+      ctaBtn: 'تواصل معنا',
+    },
+
     projects: {
       tag: 'أعمالنا',
       title: 'مشاريع مميزة',
