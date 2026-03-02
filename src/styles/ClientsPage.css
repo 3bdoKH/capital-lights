@@ -1,0 +1,275 @@
+/* =========================================
+   Clients Page Styles
+   ========================================= */
+
+/* ── Intro ── */
+.cp-intro {
+    background: var(--bg-section);
+}
+
+.cp-intro__inner {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.cp-intro__inner.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cp-intro__desc {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ── Logo Grid ── */
+.cp-logos {
+    background: var(--bg-dark);
+}
+
+.cp-logos__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.cp-logo-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 28px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+    cursor: default;
+}
+
+.cp-logos__grid.visible .cp-logo-card {
+    animation: logoIn 0.5s ease forwards;
+    animation-delay: calc(var(--i) * 0.06s);
+}
+
+@keyframes logoIn {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.cp-logo-card:hover {
+    border-color: rgba(205, 76, 44, 0.35);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Image area — white bg to preserve logo colors */
+.cp-logo-card__img-wrap {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #fff;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.cp-logo-card__img-wrap img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.cp-logo-card:hover .cp-logo-card__img-wrap img {
+    transform: scale(1.06);
+}
+
+/* Client name */
+.cp-logo-card__name {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.4;
+    transition: color 0.25s;
+}
+
+.cp-logo-card:hover .cp-logo-card__name {
+    color: var(--accent-light);
+}
+
+/* ── Trust Pillars ── */
+.cp-trust {
+    background: var(--bg-section);
+}
+
+.cp-trust__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.cp-pillar {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 36px 28px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    opacity: 0;
+    transform: translateY(24px);
+}
+
+.cp-trust__grid.visible .cp-pillar {
+    animation: logoIn 0.55s ease forwards;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+.cp-pillar:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+.cp-pillar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    transform: scaleX(0);
+    transition: transform 0.35s ease;
+}
+
+.cp-pillar:hover::after {
+    transform: scaleX(1);
+}
+
+.cp-pillar__code {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+.cp-pillar h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.cp-pillar p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ── CTA ── */
+.cp-cta {
+    background: var(--bg-dark);
+}
+
+.cp-cta__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.cp-cta__inner::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    width: 500px;
+    height: 300px;
+    background: radial-gradient(ellipse, rgba(205, 76, 44, 0.1), transparent 70%);
+    transform: translate(50%, -50%);
+    pointer-events: none;
+}
+
+.cp-cta__inner.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cp-cta__inner h2 {
+    font-size: clamp(20px, 2.5vw, 28px);
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.cp-cta__inner p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.cp-cta__btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 14px 32px;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+    .cp-logos__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cp-trust__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .cp-logos__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cp-cta__inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 36px 24px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cp-logos__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cp-trust__grid {
+        grid-template-columns: 1fr;
+    }
+}

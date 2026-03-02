@@ -153,6 +153,38 @@ export const translations = {
       title: 'Trusted by the Best',
       desc: 'We are proud to have earned the trust of leading government and private sector organizations in Saudi Arabia.',
     },
+    /* ── Clients Page ── */
+    clientsPage: {
+      heroTitle: 'Our Clients',
+      heroSubtitle: 'Trusted by the Kingdom\'s most prominent government and private sector organizations.',
+      introTag: 'Who We Serve',
+      introTitle: 'A Portfolio of Prestigious Partners',
+      introDesc: 'For over 57 years, Capital Lights has earned the trust of Saudi Arabia\'s most demanding public and private sector clients — delivering projects that meet the highest standards of quality, safety and reliability.',
+      logosTag: 'Our Clients',
+      logosTitle: 'Trusted by Leading Organizations',
+      clients: [
+        { nameEn: 'Saudi Electricity Company', nameAr: 'شركة الكهرباء السعودية' },
+        { nameEn: 'Saudi Telecom Company (STC)', nameAr: 'شركة الاتصالات السعودية' },
+        { nameEn: 'Ministry of Finance', nameAr: 'وزارة المالية' },
+        { nameEn: 'Saudi Armed Forces', nameAr: 'القوات المسلحة السعودية' },
+        { nameEn: 'Ministry of Water & Electricity', nameAr: 'وزارة المياه والكهرباء' },
+        { nameEn: 'Ministry of Health', nameAr: 'وزارة الصحة' },
+        { nameEn: 'Saudi National Guard', nameAr: 'الحرس الوطني السعودي' },
+        { nameEn: 'Border Guard', nameAr: 'حرس الحدود' },
+        { nameEn: 'Ministry of Higher Education', nameAr: 'وزارة التعليم العالي' },
+        { nameEn: 'IT Development Workshop', nameAr: 'ورشة تطوير تقنية المعلومات' },
+        { nameEn: 'General Directorate of Prisons', nameAr: 'المديرية العامة للسجون' },
+      ],
+      trustTag: 'Why They Trust Us',
+      trustTitle: 'What Sets Us Apart',
+      pillars: [
+        { code: '57+', labelEn: 'Years of Operation', descEn: 'Continuous project delivery since 1967 — a track record no competitor can match.' },
+        { code: 'I', labelEn: 'Grade I Classification', descEn: 'Awarded the highest grade by the Saudi Contractors\' Classification Committee.' },
+        { code: '250M', labelEn: 'SR Projects Delivered', descEn: 'Over SR 250 million in projects delivered, with SR 150M+ executed annually.' },
+        { code: '11+', labelEn: 'Major Client Organizations', descEn: 'Serving leading ministries, military bodies and private sector entities across the Kingdom.' },
+      ],
+    },
+
     /* ── CTA Banner ── */
     cta: {
       title: 'Ready to Start Your Next Project?',
@@ -322,6 +354,38 @@ export const translations = {
       title: 'ثقة أفضل المؤسسات',
       desc: 'نفخر بثقة كبرى المؤسسات الحكومية والقطاع الخاص في المملكة العربية السعودية.',
     },
+    /* ── Clients Page AR ── */
+    clientsPage: {
+      heroTitle: 'عملاؤنا',
+      heroSubtitle: 'حظينا بثقة أبرز المؤسسات الحكومية والقطاع الخاص في المملكة العربية السعودية.',
+      introTag: 'من نخدم',
+      introTitle: 'محفظة من الشراكات المرموقة',
+      introDesc: 'على مدى أكثر من 57 عاماً، اكتسبت أضواء العاصمة ثقة أكثر عملاء القطاع العام والخاص صرامةً في المملكة، بتسليم مشاريع تلتزم بأعلى معايير الجودة والسلامة والموثوقية.',
+      logosTag: 'عملاؤنا',
+      logosTitle: 'يثق بنا كبار المؤسسات',
+      clients: [
+        { nameEn: 'شركة الكهرباء السعودية', nameAr: 'شركة الكهرباء السعودية' },
+        { nameEn: 'شركة الاتصالات السعودية STC', nameAr: 'شركة الاتصالات السعودية' },
+        { nameEn: 'وزارة المالية', nameAr: 'وزارة المالية' },
+        { nameEn: 'القوات المسلحة السعودية', nameAr: 'القوات المسلحة السعودية' },
+        { nameEn: 'وزارة المياه والكهرباء', nameAr: 'وزارة المياه والكهرباء' },
+        { nameEn: 'وزارة الصحة', nameAr: 'وزارة الصحة' },
+        { nameEn: 'الحرس الوطني السعودي', nameAr: 'الحرس الوطني السعودي' },
+        { nameEn: 'حرس الحدود', nameAr: 'حرس الحدود' },
+        { nameEn: 'وزارة التعليم العالي', nameAr: 'وزارة التعليم العالي' },
+        { nameEn: 'ورشة تطوير تقنية المعلومات', nameAr: 'ورشة تطوير تقنية المعلومات' },
+        { nameEn: 'المديرية العامة للسجون', nameAr: 'المديرية العامة للسجون' },
+      ],
+      trustTag: 'لماذا يثقون بنا',
+      trustTitle: 'ما يميزنا',
+      pillars: [
+        { code: '+57', labelEn: 'عاماً من العمل', descEn: 'تسليم مستمر للمشاريع منذ عام 1967م — سجل لا يضاهيه أي منافس.' },
+        { code: 'I', labelEn: 'تصنيف الدرجة الأولى', descEn: 'حصلنا على أعلى تصنيف من هيئة تصنيف المقاولين السعوديين.' },
+        { code: '250م', labelEn: 'مشاريع منجزة بالريال', descEn: 'أكثر من 250 مليون ريال مشاريع منجزة، بمعدل سنوي يتجاوز 150 مليون ريال.' },
+        { code: '+11', labelEn: 'مؤسسة عميلة كبرى', descEn: 'نخدم كبرى الوزارات والجهات العسكرية والقطاع الخاص في أرجاء المملكة.' },
+      ],
+    },
+
     cta: {
       title: 'مستعد لبدء مشروعك القادم؟',
       desc: 'تواصل مع فريقنا اليوم ودعنا نناقش كيف يمكن لأضواء العاصمة أن تحقق التميز في مشروعك الكهروميكانيكي القادم.',
