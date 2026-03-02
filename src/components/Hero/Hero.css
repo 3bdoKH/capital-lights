@@ -1,0 +1,255 @@
+/* ── Hero ── */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 640px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Slides */
+.hero__slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.06);
+    transition: opacity 1s ease, transform 6s ease;
+}
+
+.hero__slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Overlay */
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(13, 15, 20, 0.82) 0%,
+            rgba(13, 15, 20, 0.55) 50%,
+            rgba(13, 15, 20, 0.40) 100%);
+    z-index: 1;
+}
+
+.hero__overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, var(--bg-dark), transparent);
+}
+
+/* Content */
+.hero__content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero__text {
+    max-width: 700px;
+    animation: heroTextIn 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+body[dir="rtl"] .hero__text {
+    max-width: 650px;
+}
+
+@keyframes heroTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(205, 76, 44, 0.15);
+    border: 1px solid rgba(205, 76, 44, 0.4);
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+}
+
+body[dir="rtl"] .hero__badge {
+    letter-spacing: 0;
+    font-size: 13px;
+}
+
+.hero__badge::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.7);
+    }
+}
+
+.hero__title {
+    font-size: clamp(32px, 5.5vw, 64px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1px;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+body[dir="rtl"] .hero__title {
+    letter-spacing: 0;
+    line-height: 1.25;
+}
+
+.hero__subtitle {
+    font-size: clamp(15px, 2vw, 18px);
+    color: rgba(240, 242, 247, 0.75);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 560px;
+}
+
+.hero__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* Indicators */
+.hero__indicators {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    gap: 10px;
+}
+
+.hero__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.hero__dot.active {
+    background: var(--accent);
+    width: 28px;
+    border-radius: 4px;
+}
+
+/* Progress bar */
+.hero__progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 4;
+}
+
+.hero__progress-bar {
+    height: 100%;
+    background: var(--accent);
+    animation: progressAnim 5.5s linear forwards;
+}
+
+@keyframes progressAnim {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Scroll hint */
+.hero__scroll-hint {
+    position: absolute;
+    bottom: 44px;
+    right: 40px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body[dir="rtl"] .hero__scroll-hint {
+    right: auto;
+    left: 40px;
+}
+
+.hero__scroll-arrow {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-right: 2px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    transform: rotate(45deg);
+    animation: scrollBounce 1.5s infinite;
+}
+
+@keyframes scrollBounce {
+
+    0%,
+    100% {
+        transform: rotate(45deg) translate(0, 0);
+        opacity: .6;
+    }
+
+    50% {
+        transform: rotate(45deg) translate(4px, 4px);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero__scroll-hint {
+        display: none;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    body[dir="rtl"] .hero__actions {
+        align-items: flex-end;
+    }
+}

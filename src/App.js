@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './index.css';
+import { LanguageProvider } from './context/LanguageContext';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+
+/* Pages */
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ServicesPage from './pages/ServicesPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ClientsPage from './pages/ClientsPage';
+import ContactPage from './pages/ContactPage';
+import SearchPage from './pages/SearchPage';
+
+/* Scroll to top on route change */
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <LanguageProvider>
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/clients" element={<ClientsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/search" element={<SearchPage />} />
+        </Routes>
+        <Footer />
+      </LanguageProvider>
+    </BrowserRouter>
   );
 }
 

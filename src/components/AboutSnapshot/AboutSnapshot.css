@@ -1,0 +1,193 @@
+/* ── About Snapshot ── */
+.about-snap {
+    background: var(--bg-section);
+}
+
+.about-snap__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+body[dir="rtl"] .about-snap__grid {
+    direction: rtl;
+}
+
+/* Media */
+.about-snap__media {
+    position: relative;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+body[dir="rtl"] .about-snap__media {
+    transform: translateX(40px);
+}
+
+.about-snap__media.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-snap__img-main {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border);
+}
+
+.about-snap__img-main img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.about-snap__img-main:hover img {
+    transform: scale(1.04);
+}
+
+.about-snap__img-stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.about-snap__img-stack img {
+    border-radius: var(--radius-sm);
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+    transition: transform 0.5s ease;
+}
+
+.about-snap__img-stack img:hover {
+    transform: scale(1.03);
+}
+
+/* Floating badge */
+.about-snap__badge-float {
+    position: absolute;
+    top: 24px;
+    right: -20px;
+    background: var(--accent);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    text-align: center;
+    box-shadow: var(--shadow-accent);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+body[dir="rtl"] .about-snap__badge-float {
+    right: auto;
+    left: -20px;
+}
+
+.about-snap__badge-num {
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+}
+
+.about-snap__badge-lab {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+body[dir="rtl"] .about-snap__badge-lab {
+    letter-spacing: 0;
+    font-size: 12px;
+}
+
+/* Content */
+.about-snap__content {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s;
+}
+
+body[dir="rtl"] .about-snap__content {
+    transform: translateX(-40px);
+}
+
+.about-snap__content.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-snap__content .section-header {
+    margin-bottom: 20px;
+}
+
+.about-snap__content .section-header h2 {
+    margin-bottom: 0;
+}
+
+.about-snap__body {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 20px 0 28px;
+}
+
+/* Stats */
+.about-snap__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.about-snap__stat {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    transition: var(--transition);
+}
+
+.about-snap__stat:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+.about-snap__stat strong {
+    display: block;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 4px;
+}
+
+.about-snap__stat span {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-snap__grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-snap__badge-float {
+        right: 12px;
+        top: 12px;
+    }
+
+    body[dir="rtl"] .about-snap__badge-float {
+        right: auto;
+        left: 12px;
+    }
+}

@@ -1,0 +1,87 @@
+/* ── PageHero – Shared inner-page banner ── */
+.page-hero {
+    position: relative;
+    padding: calc(var(--nav-height) + 72px) 0 72px;
+    background: var(--bg-surface);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.page-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(13, 15, 20, 0.92) 0%,
+            rgba(13, 15, 20, 0.70) 100%);
+}
+
+/* Bottom fade into page */
+.page-hero__overlay::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, var(--bg-dark));
+}
+
+.page-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Breadcrumb */
+.page-hero__breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.page-hero__breadcrumb a {
+    color: var(--text-muted);
+    transition: color 0.2s;
+}
+
+.page-hero__breadcrumb a:hover {
+    color: var(--accent);
+}
+
+.page-hero__breadcrumb span:last-child {
+    color: var(--accent);
+}
+
+/* Title */
+.page-hero__content h1 {
+    font-size: clamp(28px, 4.5vw, 52px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 14px;
+}
+
+body[dir="rtl"] .page-hero__content h1 {
+    line-height: 1.3;
+}
+
+.page-hero__content p {
+    font-size: 16px;
+    color: rgba(240, 242, 247, 0.7);
+    max-width: 560px;
+    line-height: 1.7;
+}
+
+/* Accent bar */
+.page-hero__content::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-bottom: 24px;
+}
